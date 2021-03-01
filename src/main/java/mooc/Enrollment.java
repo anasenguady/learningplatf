@@ -8,6 +8,8 @@ class Enrollment {
     private final Person student;
     private final Course course;
     private Integer mark = null;
+    private final Platform pl1=new Platform();
+    
 
     Enrollment(Person s, Course c) {
         if (null == s) {
@@ -18,6 +20,10 @@ class Enrollment {
         }
         student = s;
         course = c;
+    }
+
+    Enrollment() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public Person getPerson() {

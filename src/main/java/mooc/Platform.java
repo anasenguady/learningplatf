@@ -3,8 +3,13 @@ package mooc;
 import java.util.*;
 
 public class Platform {
+        
+        public List<Enrollment> myEnroll = new ArrayList<>();
+        public List<Person> myStudent = new ArrayList<>();
+        public List<Course> myCours = new ArrayList<>();
 
 	public Platform() {
+         
 	}
 
 	/**
@@ -12,21 +17,29 @@ public class Platform {
 	 * @param c le cours à ajouter (non null)
 	 */
 	public void addCourse(Course c) {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+            
+            if(null==c){
+                    throw new IllegalArgumentException("Course is not null");
+                    
+            }
+            Course c1 = new Course();
+            myCours.add(c1);
+           
 	}
 
 	/**
 	 * @return les étudiants inscrits à l'université
 	 */
 	public Set<Person> students() {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+            return(students());
+		
 	}
 
 	/**
 	 * @return les cours dispensés par l'université
 	 */
 	public Set<Course> courses() {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+		return(courses());
 	}
 
 	/**
@@ -34,7 +47,17 @@ public class Platform {
 	 * @param s  l'étudiant à inscrire (non null)
 	 */
 	public void registerStudent(Person s) {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+            
+            
+            if(null==s){
+                throw new IllegalArgumentException("person is not null");
+                
+            }
+            Person s1 = new Person();
+            myStudent.add(s1);
+                
+                
+                
 	}
 
 	/**
@@ -45,7 +68,20 @@ public class Platform {
 	 * ou si le cours n'est pas dispensé par l'université
 	 */
 	public void enroll(Person s, Course c) throws Exception {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+            
+            
+            if(null==s || null==c){
+                throw new IllegalArgumentException("person and course are not null");
+            
+            }else{
+                Enrollment e1=new Enrollment();
+                myEnroll.add(e1);
+                
+            }
+            
+            
+        
+		
 	}
 
 	/**
@@ -55,7 +91,12 @@ public class Platform {
 	 * @throws Exception si l'étudiant a déjà une note àce cours
 	 */
 	public void withdraw(Person s, Course c) throws Exception {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+            throw new UnsupportedOperationException("Pas encore implémenté");
+            }
+            
+            
+            
+		
 	}
 
 	/**

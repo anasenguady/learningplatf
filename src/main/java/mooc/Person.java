@@ -9,6 +9,10 @@ public class Person
             throw new IllegalArgumentException("name is null");
         myName = name;
     }
+
+    Person() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
        
     public String getName() { return myName;  }

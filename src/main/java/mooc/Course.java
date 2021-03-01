@@ -14,6 +14,10 @@ public class Course
         myLabel = name;
         myVolume = hours;
     }
+
+    Course() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public String getLabel() { return myLabel;  }
     
